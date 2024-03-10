@@ -1,0 +1,44 @@
+Book Store Website.
+
+Using:
+Backend => .Net Core ( Asp.net web Api )
+FrontEnd => Angular Framework
+Database => MSSQL 
+
+Files Structure:
+Controllers file => BookController.cs ( CRUD operations )
+Data file => BookStoreContext.cs(class) & Repositories file => BookRepository.cs (class) + IBookRepository.cs(Interface)
+Models file=> Books.css
+  
+Download Packages(Entire Project):
+1-EntityFrameworkCore.
+2-EntityFrameworkCore.SqlServer
+3-EntityFrameworkCore.Tools
+
+Files implement:
+1) Models => properties:
+	1-Id - int
+	2-Name - string 
+	3-Author - string 
+	4-Descreption - string 
+	5-isActive - bool
+
+2) Data => Context:
+	1-inherent from DbContext
+	2-add constructor with DbContextoption with type BookStoreContext(DbContext file name} that takes options as variable and inherent from the base class that take the same variable.
+	3-add DbSet of the Book class (public DbSet<Book> books(database table name) { get; set; })
+	4-add connection string in appsetting.json file.
+	5-add DbContext in the Program.cs(  builder.Services.AddDbContext<BookStoreContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("connection"))); )
+	6-add-migration and update database using NPM terminal.
+
+2) Data => Repositories:
+	1-IBookRepository  => include the CRUD without implementation.
+		#GetAll method => IEnumerable<Book > GetAll(); =>  Use class (Book) as Data type to get all data from database.
+		#Get method => Book Get(int id); => Use class(Book) as a data type with (id) as parameter.
+		#Create method => int Create(Book item); => Use (int) as data type with class name (Book) as parameter.
+		#Update method => int Update(Book item); => Use (int) as data type with class name (Book) as parameter.
+		#Delete method => int Delete(Book item); => Use (int) as data type with class name (Book) as parameter.
+
+	2-BookRepository =>
+
+		

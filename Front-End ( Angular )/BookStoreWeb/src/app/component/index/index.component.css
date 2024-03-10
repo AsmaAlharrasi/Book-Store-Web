@@ -1,0 +1,10 @@
+.custom-table {
+    background-color: #002b36; /* Change the background color as needed */
+    border: 1px solid #003c4a
+  }
+  .mat-row:hover {
+    /* Hover styles */
+    background-color: #003c4a; /* Light gray background */
+    cursor: pointer; /* Pointer cursor */
+  }
+  

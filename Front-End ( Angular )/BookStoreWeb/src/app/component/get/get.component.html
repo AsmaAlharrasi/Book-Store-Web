@@ -1,0 +1,28 @@
+<div class="row pb-2">
+  <h2 class="text-primary mt-4" style="font-size:40px;">View Book</h2>
+  <hr/>
+</div>
+
+<mat-card class="w-50" style="background-color: #003440;">
+    <mat-card-header class="my-3" >
+        
+      <!-- <mat-card-title>Id: {{item.id}}</mat-card-title>  -->
+      
+      <mat-card-title>Title:</mat-card-title>
+      <mat-card-title class="mb-4 text-primary mx-2">- {{item.name}}</mat-card-title>
+    
+      <mat-card-title>Author:</mat-card-title>
+      <mat-card-title class="mb-4 text-primary mx-2">- {{item.author}}</mat-card-title>
+
+      <mat-card-title>description:</mat-card-title>
+      <mat-card-title class="mb-4 text-primary mx-2">- {{item.description}}</mat-card-title>
+
+      <mat-card-title>is Active ?</mat-card-title>
+      <mat-card-title class="mb-4 text-primary mx-2">- {{item.isActive | isActive}}</mat-card-title>
+
+    </mat-card-header>
+
+  </mat-card>
+  <button  mat-raised-button color="basic" class="mt-4" [routerLink]="'/'">Back</button>
+
+

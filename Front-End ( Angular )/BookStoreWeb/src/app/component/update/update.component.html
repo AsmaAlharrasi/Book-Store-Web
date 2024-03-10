@@ -1,0 +1,42 @@
+
+
+<div class="bordercp-3 mt-4" > 
+    <div class="row pb-2">
+        <h2 class="text-primary mt-4" style="font-size:40px;">Edit Book</h2>
+        <hr/>
+    </div>
+
+<form [formGroup]="book" (ngSubmit)="onSubmit()" >
+    <mat-form-field class="w-50" >
+    <mat-label>Name</mat-label>
+      <input matInput type="text" formControlName="name" required>
+    </mat-form-field><br>
+  
+    <mat-form-field class="w-50">
+    <mat-label>Author</mat-label>
+      <input matInput type="text" formControlName="author"  required>
+    </mat-form-field><br>
+  
+    <mat-form-field class="w-50" >
+    <mat-label>Description</mat-label>
+      <input matInput type="text" formControlName="description" >
+    </mat-form-field><br>
+    
+    <mat-checkbox formControlName="isActive">
+     {{item.isActive | isActive}}
+    </mat-checkbox>
+    
+    <br>
+    <br>
+
+    <button mat-raised-button type="submit" color="warn">Save</button>
+    <button mat-raised-button [routerLink]="['/']" color="basic" class="mx-3">Back</button>
+
+</form>
+ 
+    
+
+
+ 
+  
+   
